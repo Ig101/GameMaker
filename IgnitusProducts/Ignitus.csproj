@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A51482E1-900E-4338-BB12-EF2CCF947C84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ignitus</RootNamespace>
+    <AssemblyName>Ignitus</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.5.1.1679, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventHandlers.cs" />
+    <Compile Include="IgnitusGUI\IgnitusManager.cs" />
+    <Compile Include="IgnitusGUI\LanguageStruct.cs" />
+    <Compile Include="IgnitusGUI\ModeStruct.cs" />
+    <Compile Include="IgnitusGUI\NativeStruct.cs" />
+    <Compile Include="IgnitusGUI\SoundStruct.cs" />
+    <Compile Include="IgnitusGUI\SpriteStruct.cs" />
+    <Compile Include="IgnitusGUI\TextureStruct.cs" />
+    <Compile Include="Magic.cs" />
+    <Compile Include="MainGame\Elems\AnyKeyElement.cs" />
+    <Compile Include="MainGame\Elems\BorderElement.cs" />
+    <Compile Include="MainGame\Elems\ButtonElement.cs" />
+    <Compile Include="MainGame\Elems\CheckBoxElement.cs" />
+    <Compile Include="MainGame\Elems\ContextMenuElement.cs" />
+    <Compile Include="MainGame\Elems\LabelElement.cs" />
+    <Compile Include="MainGame\Elems\ListElement.cs" />
+    <Compile Include="MainGame\Elems\LoadingWheelElement.cs" />
+    <Compile Include="MainGame\Elems\SlideElement.cs" />
+    <Compile Include="MainGame\Elems\SpriteButtonElement.cs" />
+    <Compile Include="MainGame\Elems\SpriteElement.cs" />
+    <Compile Include="MainGame\Elems\TimerElement.cs" />
+    <Compile Include="MainGame\Game1.cs" />
+    <Compile Include="MainGame\Game1LoadContent.cs" />
+    <Compile Include="MainGame\HudElement.cs" />
+    <Compile Include="MainGame\MenuActions.cs" />
+    <Compile Include="MainGame\Mode.cs" />
+    <Compile Include="MainGame\Sprite.cs" />
+    <Compile Include="MainGame\SpriteInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
